@@ -16,6 +16,7 @@
 		27D4239D1AF8159B0099F224 /* DayXTrioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D4239C1AF8159B0099F224 /* DayXTrioTests.m */; };
 		27D423A81AF8165E0099F224 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D423A71AF8165E0099F224 /* DetailViewController.m */; };
 		27D423AB1AF818A60099F224 /* ViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D423AA1AF818A60099F224 /* ViewControllerDataSource.m */; };
+		27D424581AFC01410099F224 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D424571AFC01410099F224 /* Entry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		27D423A71AF8165E0099F224 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		27D423A91AF818A60099F224 /* ViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerDataSource.h; sourceTree = "<group>"; };
 		27D423AA1AF818A60099F224 /* ViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerDataSource.m; sourceTree = "<group>"; };
+		27D424561AFC01410099F224 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		27D424571AFC01410099F224 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				27D423AA1AF818A60099F224 /* ViewControllerDataSource.m */,
 				27D423A61AF8165E0099F224 /* DetailViewController.h */,
 				27D423A71AF8165E0099F224 /* DetailViewController.m */,
+				27D424561AFC01410099F224 /* Entry.h */,
+				27D424571AFC01410099F224 /* Entry.m */,
 				27D4238A1AF8159B0099F224 /* Main.storyboard */,
 				27D4238D1AF8159B0099F224 /* Images.xcassets */,
 				27D4238F1AF8159B0099F224 /* LaunchScreen.xib */,
@@ -229,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27D424581AFC01410099F224 /* Entry.m in Sources */,
 				27D423891AF8159B0099F224 /* ViewController.m in Sources */,
 				27D423861AF8159B0099F224 /* AppDelegate.m in Sources */,
 				27D423AB1AF818A60099F224 /* ViewControllerDataSource.m in Sources */,
@@ -430,6 +436,7 @@
 				27D423A21AF8159B0099F224 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27D423A31AF8159B0099F224 /* Build configuration list for PBXNativeTarget "DayXTrioTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +445,7 @@
 				27D423A51AF8159B0099F224 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
