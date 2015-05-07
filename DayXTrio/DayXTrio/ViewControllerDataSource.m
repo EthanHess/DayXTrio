@@ -7,26 +7,35 @@
 //
 
 #import "ViewControllerDataSource.h"
+#import "EntryController.h"
 
 @implementation ViewControllerDataSource
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [self entryTitleArray].count;
+    return [EntryController sharedInstance].entries.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
-    cell.textLabel.text = [self entryTitleArray][indexPath.row];
+    cell.textLabel.text = ((Entry *)[EntryController sharedInstance].entries[indexPath.row]).title;
     
     return cell;
 }
 
-- (NSArray *)entryTitleArray {
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return @[@"Entry 1", @"Entry 2", @"Entry 3", @"Entry 4", @"Entry 5"];
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        [tableView beginUpdates];
+        
+        [[EntryController sharedInstance]removeEntry:[EntryController sharedInstance].entries[indexPath.row]];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+        [tableView reloadData];
+    }
 }
 
 @end

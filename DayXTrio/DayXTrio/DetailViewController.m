@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "EntryController.h"
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -20,13 +21,34 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"Entry";
+
+}
+
+- (void)updateWithEntry:(Entry *)entry {
+    
+    self.entry = entry;
+    
+    self.title = entry.title;
+    
+    self.textField.text = entry.title;
+    self.textView.text = entry.text;
+    
 }
 
 - (IBAction)clearButtonPressed:(id)sender {
     
     self.textField.text = @"";
     self.textView.text = @"";
+}
+
+- (IBAction)saveEntry:(id)sender {
+    
+    Entry *entry = [[Entry alloc]initWithDictionary:@{titleKey: self.textField.text, textKey: self.textView.text}];
+    
+    [[EntryController sharedInstance]addEntry:entry];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {

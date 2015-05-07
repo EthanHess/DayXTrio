@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Entry.h"
 
 @interface DetailViewController : UIViewController
+
+@property (nonatomic, strong) Entry *entry;
+
+- (void)updateWithEntry:(Entry *)entry;
 
 @end

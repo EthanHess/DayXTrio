@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "DetailViewController.h"
+#import "EntryController.h"
 
 @interface ViewController () <UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -19,11 +23,24 @@
     
     self.title = @"My Journal";
     
+    [self.tableView reloadData];
+    
+}
+     
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+ 
+    
 }
 
+     
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
+         
+    DetailViewController *dvc = [DetailViewController new];
+    [dvc updateWithEntry:[EntryController sharedInstance].entries[indexPath.row]];
+         
 }
 
 - (void)didReceiveMemoryWarning {

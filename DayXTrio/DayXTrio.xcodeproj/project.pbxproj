@@ -17,6 +17,7 @@
 		27D423A81AF8165E0099F224 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D423A71AF8165E0099F224 /* DetailViewController.m */; };
 		27D423AB1AF818A60099F224 /* ViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D423AA1AF818A60099F224 /* ViewControllerDataSource.m */; };
 		27D424581AFC01410099F224 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D424571AFC01410099F224 /* Entry.m */; };
+		27D4245B1AFC03430099F224 /* EntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D4245A1AFC03430099F224 /* EntryController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		27D423AA1AF818A60099F224 /* ViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerDataSource.m; sourceTree = "<group>"; };
 		27D424561AFC01410099F224 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
 		27D424571AFC01410099F224 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		27D424591AFC03430099F224 /* EntryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryController.h; sourceTree = "<group>"; };
+		27D4245A1AFC03430099F224 /* EntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				27D423A71AF8165E0099F224 /* DetailViewController.m */,
 				27D424561AFC01410099F224 /* Entry.h */,
 				27D424571AFC01410099F224 /* Entry.m */,
+				27D424591AFC03430099F224 /* EntryController.h */,
+				27D4245A1AFC03430099F224 /* EntryController.m */,
 				27D4238A1AF8159B0099F224 /* Main.storyboard */,
 				27D4238D1AF8159B0099F224 /* Images.xcassets */,
 				27D4238F1AF8159B0099F224 /* LaunchScreen.xib */,
@@ -238,6 +243,7 @@
 				27D423891AF8159B0099F224 /* ViewController.m in Sources */,
 				27D423861AF8159B0099F224 /* AppDelegate.m in Sources */,
 				27D423AB1AF818A60099F224 /* ViewControllerDataSource.m in Sources */,
+				27D4245B1AFC03430099F224 /* EntryController.m in Sources */,
 				27D423831AF8159B0099F224 /* main.m in Sources */,
 				27D423A81AF8165E0099F224 /* DetailViewController.m in Sources */,
 			);

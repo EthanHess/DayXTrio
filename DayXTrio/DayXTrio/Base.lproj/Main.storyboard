@@ -46,7 +46,16 @@
                             <constraint firstItem="CHo-Es-dcY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="o5z-lz-TFn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nQs-nJ-9kl"/>
+                    <navigationItem key="navigationItem" id="nQs-nJ-9kl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xi1-PZ-bNa">
+                            <connections>
+                                <segue destination="3Eb-b0-v4z" kind="show" id="9Ly-PC-PN3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="CHo-Es-dcY" id="SH0-SB-lwz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="CYa-0K-Z0D" customClass="ViewControllerDataSource"/>
@@ -91,6 +100,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHw-Rr-BcS">
+                                <rect key="frame" x="277" y="494" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="EZC-p5-7yS"/>
+                                </constraints>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveEntry:" destination="3Eb-b0-v4z" eventType="touchUpInside" id="fah-Jt-tJs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -99,8 +120,10 @@
                             <constraint firstItem="jmA-Us-Khj" firstAttribute="top" secondItem="OrI-wv-AjA" secondAttribute="bottom" constant="30" id="DxE-5Y-euE"/>
                             <constraint firstItem="OrI-wv-AjA" firstAttribute="trailing" secondItem="Xul-Kz-keh" secondAttribute="trailingMargin" id="RVH-Jb-zUJ"/>
                             <constraint firstItem="jmA-Us-Khj" firstAttribute="leading" secondItem="Xul-Kz-keh" secondAttribute="leadingMargin" constant="85" id="SbE-4h-0bw"/>
+                            <constraint firstItem="ZHw-Rr-BcS" firstAttribute="top" secondItem="IfJ-Rq-Dx3" secondAttribute="bottom" constant="8" symbolic="YES" id="Sxc-eR-or8"/>
                             <constraint firstItem="IfJ-Rq-Dx3" firstAttribute="top" secondItem="jmA-Us-Khj" secondAttribute="bottom" constant="52" id="Zw1-3Q-J6u"/>
                             <constraint firstItem="OrI-wv-AjA" firstAttribute="top" secondItem="eKq-kI-XPL" secondAttribute="bottom" constant="27" id="cIP-Xx-45K"/>
+                            <constraint firstItem="ZHw-Rr-BcS" firstAttribute="centerX" secondItem="IfJ-Rq-Dx3" secondAttribute="centerX" id="p1H-A8-IRC"/>
                             <constraint firstItem="IfJ-Rq-Dx3" firstAttribute="centerX" secondItem="jmA-Us-Khj" secondAttribute="centerX" id="p6m-JB-VGX"/>
                             <constraint firstItem="OrI-wv-AjA" firstAttribute="leading" secondItem="Xul-Kz-keh" secondAttribute="leadingMargin" id="tPV-w7-i6H"/>
                         </constraints>
@@ -112,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fqp-MX-hyK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1666" y="396"/>
+            <point key="canvasLocation" x="1757" y="396"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="F38-cg-p0R">
@@ -133,4 +156,7 @@
             <point key="canvasLocation" x="220" y="396"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="mXa-pJ-Hvi"/>
+    </inferredMetricsTieBreakers>
 </document>
