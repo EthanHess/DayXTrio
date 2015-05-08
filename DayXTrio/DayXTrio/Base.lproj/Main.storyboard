@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C2055" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SAp-mY-ne2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SAp-mY-ne2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -75,9 +75,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmA-Us-Khj">
-                                <rect key="frame" x="101" y="151" width="399" height="253"/>
+                                <rect key="frame" x="16" y="136" width="568" height="312"/>
                                 <color key="backgroundColor" red="0.79924727724701417" green="1" blue="0.98951095896455665" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -117,11 +116,11 @@
                         <constraints>
                             <constraint firstItem="jmA-Us-Khj" firstAttribute="centerX" secondItem="OrI-wv-AjA" secondAttribute="centerX" id="373-Zs-zvb"/>
                             <constraint firstItem="uMS-hm-hli" firstAttribute="top" secondItem="IfJ-Rq-Dx3" secondAttribute="bottom" constant="114" id="5l1-J5-IqU"/>
-                            <constraint firstItem="jmA-Us-Khj" firstAttribute="top" secondItem="OrI-wv-AjA" secondAttribute="bottom" constant="30" id="DxE-5Y-euE"/>
+                            <constraint firstItem="jmA-Us-Khj" firstAttribute="top" secondItem="OrI-wv-AjA" secondAttribute="bottom" constant="15" id="DxE-5Y-euE"/>
                             <constraint firstItem="OrI-wv-AjA" firstAttribute="trailing" secondItem="Xul-Kz-keh" secondAttribute="trailingMargin" id="RVH-Jb-zUJ"/>
-                            <constraint firstItem="jmA-Us-Khj" firstAttribute="leading" secondItem="Xul-Kz-keh" secondAttribute="leadingMargin" constant="85" id="SbE-4h-0bw"/>
+                            <constraint firstItem="jmA-Us-Khj" firstAttribute="leading" secondItem="Xul-Kz-keh" secondAttribute="leadingMargin" id="SbE-4h-0bw"/>
                             <constraint firstItem="ZHw-Rr-BcS" firstAttribute="top" secondItem="IfJ-Rq-Dx3" secondAttribute="bottom" constant="8" symbolic="YES" id="Sxc-eR-or8"/>
-                            <constraint firstItem="IfJ-Rq-Dx3" firstAttribute="top" secondItem="jmA-Us-Khj" secondAttribute="bottom" constant="52" id="Zw1-3Q-J6u"/>
+                            <constraint firstItem="IfJ-Rq-Dx3" firstAttribute="top" secondItem="jmA-Us-Khj" secondAttribute="bottom" constant="8" id="Zw1-3Q-J6u"/>
                             <constraint firstItem="OrI-wv-AjA" firstAttribute="top" secondItem="eKq-kI-XPL" secondAttribute="bottom" constant="27" id="cIP-Xx-45K"/>
                             <constraint firstItem="ZHw-Rr-BcS" firstAttribute="centerX" secondItem="IfJ-Rq-Dx3" secondAttribute="centerX" id="p1H-A8-IRC"/>
                             <constraint firstItem="IfJ-Rq-Dx3" firstAttribute="centerX" secondItem="jmA-Us-Khj" secondAttribute="centerX" id="p6m-JB-VGX"/>

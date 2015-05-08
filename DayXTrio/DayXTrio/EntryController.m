@@ -31,6 +31,16 @@ static NSString * const entryListKey = @"entryKey";
     
 }
 
+- (Entry *)createEntryWithTitle:(NSString *)title text:(NSString *)text {
+    Entry *entry = [Entry new];
+    entry.title = title;
+    entry.text = text;
+    entry.timeStamp = [NSDate date];
+    
+    [self addEntry:entry];
+    
+    return entry;
+}
 
 - (void)addEntry:(Entry *)entry {
     

@@ -12,7 +12,7 @@
 
 @interface ViewController () <UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 
 @end
 
@@ -23,10 +23,11 @@
     
     self.title = @"My Journal";
     
-    [self.tableView reloadData];
-    
 }
-     
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self.tableView reloadData];
+}
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

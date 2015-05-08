@@ -19,4 +19,8 @@
 
 - (void)removeEntry:(Entry *)entry;
 
+- (Entry *)createEntryWithTitle:(NSString *)title text:(NSString *)text;
+
+- (void)synchronize;
+
 @end

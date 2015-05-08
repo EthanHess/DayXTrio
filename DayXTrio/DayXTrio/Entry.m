@@ -26,6 +26,16 @@
     
 }
 
+//- (NSDictionary *)entryDictionary {
+//    NSDictionary *dictionary = @{
+//                                 titleKey : self.title,
+//                                 textKey : self.text,
+//                                 timeStampKey : self.timeStamp,
+//                                 };
+//    
+//    return dictionary;
+//}
+
 - (NSDictionary *)entryDictionary {
     
     NSMutableDictionary *entryDictionary = [NSMutableDictionary new];

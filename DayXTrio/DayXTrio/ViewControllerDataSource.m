@@ -32,7 +32,7 @@
         [tableView beginUpdates];
         
         [[EntryController sharedInstance]removeEntry:[EntryController sharedInstance].entries[indexPath.row]];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationMiddle];
         
         [tableView reloadData];
     }
