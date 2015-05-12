@@ -16,11 +16,22 @@
     return [EntryController sharedInstance].entries.count;
 }
 
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     
-    cell.textLabel.text = ((Entry *)[EntryController sharedInstance].entries[indexPath.row]).title;
+    Entry *entry = [[EntryController sharedInstance].entries objectAtIndex:indexPath.row];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd MMM yyyy -- HH:mm"];
+    NSDate *date = entry.timeStamp;
+    NSString *formattedDateString = [dateFormatter stringFromDate:date];
+    
+    cell.textLabel.text = entry.title;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", formattedDateString];
+    
+    
     
     return cell;
 }
