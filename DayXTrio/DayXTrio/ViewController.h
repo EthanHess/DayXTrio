@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewControllerDataSource.h"
 
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) ViewControllerDataSource *dataSource;
 
 @end
 

@@ -19,20 +19,23 @@
 
 @implementation DetailViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.textView.delegate = self;
-    self.textField.delegate = self;
-    [self updateWithEntry:self.entry];
-
-}
-
 - (void)updateWithEntry:(Entry *)entry {
+    
+    self.entry = entry;
     
     self.textField.text = entry.title;
     self.textView.text = entry.text;
     
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.textView.delegate = self;
+    self.textField.delegate = self;
+    
+    [self updateWithEntry:self.entry];
+
 }
 
 - (IBAction)clearButtonPressed:(id)sender {

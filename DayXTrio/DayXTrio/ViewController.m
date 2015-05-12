@@ -23,26 +23,39 @@
     
     self.title = @"My Journal";
     
+    self.dataSource = [ViewControllerDataSource new];
+    
+    self.tableView.dataSource = self.dataSource;
+    self.tableView.delegate = self;
+    
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    
     [self.tableView reloadData];
 }
 
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
- 
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     
+    if ([segue.identifier isEqualToString:@"viewEntry"]) {
+        
+        DetailViewController *dvc = segue.destinationViewController;
+        dvc.entry = [EntryController sharedInstance].entries[indexPath.row];
+    }
+    
+    else {
+        
+        if ([segue.identifier isEqualToString:@"addEntry"]) {
+            
+            DetailViewController *dvc = [DetailViewController new];
+            [self.navigationController pushViewController:dvc animated:YES];
+        }
+    }
 }
 
-     
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-         
-    DetailViewController *dvc = [DetailViewController new];
-    [dvc updateWithEntry:[EntryController sharedInstance].entries[indexPath.row]];
-         
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
