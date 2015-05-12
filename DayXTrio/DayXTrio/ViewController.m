@@ -46,14 +46,6 @@
         dvc.entry = [EntryController sharedInstance].entries[indexPath.row];
     }
     
-    else {
-        
-        if ([segue.identifier isEqualToString:@"addEntry"]) {
-            
-            DetailViewController *dvc = [DetailViewController new];
-            [self.navigationController pushViewController:dvc animated:YES];
-        }
-    }
 }
 
 

@@ -29,8 +29,6 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
-        [tableView beginUpdates];
-        
         [[EntryController sharedInstance]removeEntry:[EntryController sharedInstance].entries[indexPath.row]];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationMiddle];
         
