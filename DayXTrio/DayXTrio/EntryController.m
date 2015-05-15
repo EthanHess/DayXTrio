@@ -52,7 +52,7 @@ static NSString * const entryListKey = @"entryKey";
     [mutableEntries addObject:entry];
     
     self.entries = mutableEntries;
-    [self synchronize];
+    [self save];
     
 }
 
@@ -66,7 +66,7 @@ static NSString * const entryListKey = @"entryKey";
     [mutableEntries removeObject:entry];
     
     self.entries = mutableEntries;
-    [self synchronize];
+    [self save];
     
 }
 
@@ -88,7 +88,7 @@ static NSString * const entryListKey = @"entryKey";
 
 
 
-- (void)synchronize {
+- (void)save {
     
     NSMutableArray *entryArray = [NSMutableArray new];
     for (Entry *entry in self.entries) {

@@ -21,6 +21,6 @@
 
 - (Entry *)createEntryWithTitle:(NSString *)title text:(NSString *)text;
 
-- (void)synchronize;
+- (void)save;
 
 @end

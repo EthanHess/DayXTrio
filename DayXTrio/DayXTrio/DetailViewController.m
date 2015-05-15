@@ -54,7 +54,7 @@
         self.entry = [[EntryController sharedInstance] createEntryWithTitle:self.textField.text text:self.textView.text];
     }
     
-    [[EntryController sharedInstance] synchronize];
+    [[EntryController sharedInstance] save];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
